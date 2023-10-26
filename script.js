@@ -35,3 +35,30 @@ const interval = setInterval(() => {
     changeSlide(currentIndex);
 }, 3000);
 
+const leftArrow = document.querySelector('arrow-left')
+const rightArrow = document.querySelector('arrow-right')
+
+leftArrow.addEventListener('click',() => {
+    clearInterval(interval);
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    changeSlide(currentIndex);
+    setTimeout(() => {
+      interval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        changeSlide(currentIndex);
+      },3000)  
+    },3000)
+});
+
+rightArrow.addEventListener('click',() => {
+    clearInterval(interval);
+    currentIndex = (currentIndex + 1 + images.length) % images.length;
+    changeSlide(currentIndex);
+    setTimeout(() => {
+      interval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        changeSlide(currentIndex);
+      },3000)  
+    },3000)
+});
+
