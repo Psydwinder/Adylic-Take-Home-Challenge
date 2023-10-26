@@ -4,6 +4,7 @@
 }
 
 * {
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
@@ -15,22 +16,55 @@
     position: relative;
 }
 
-
-.banner .carousel .container1 img{
-    width: 300px;
-    height: 453px;
-    object-fit: cover;
-    object-position: 0 0;
-    
-}
-
 .banner .logo img {
     width: 199px;
     height: 63px;
     position: absolute;
     top: 176px;
     left: 50.5px;
+    z-index: 10;
 }
+
+.carousel {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel img {
+    width:300px;
+    height:444px;
+    object-fit: cover;
+    position: absolute;
+    object-position: 0 0;
+    opacity: 0;
+}
+
+ /* .banner .carousel .micro-bags{
+    width: 300px;
+    height: 453px;
+    
+    
+}
+.banner .carousel .mens-scarf-and-briefcase{
+    width: 300px;
+    height: 444px;
+    
+}
+.banner .carousel .mini-alexa{
+    width: 300px;
+    height: 489.5px;
+    
+}
+.banner .carousel .lily{
+    width: 300px;
+    height: 524.5px;
+} */
+
+
 
 .banner .overlay {
     width: 300px;
@@ -39,6 +73,7 @@
     margin: 435px 0 0;
     padding: 29.5px 19.5px 32px;
     background-color: #f9f7f0;
+    z-index: 10;
 }
 
 .banner .overlay .productname {
@@ -54,6 +89,7 @@
     left: 72px;
     object-fit: contain;
     color: #000000;
+    opacity: 0;
 }
 
 .banner .overlay .arrow-right img{
@@ -81,4 +117,4 @@
     position: absolute;
     bottom: 32px;
     left: 108px;
-}
+} 
